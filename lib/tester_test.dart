@@ -1,4 +1,4 @@
-  // Copyright 2014 The Flutter Authors. All rights reserved.
+// Copyright 2014 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -27,7 +27,12 @@ void expect(dynamic actual, dynamic matcher) {
     // Do nothing
   }
   var mismatchDescription = test.StringDescription();
-  matcher.describeMismatch(actual, mismatchDescription, matchState);
+  wrappedMatcher.describeMismatch(
+    actual,
+    mismatchDescription,
+    matchState,
+    false,
+  );
   var buffer = StringBuffer()
     ..write('Expected: ')
     ..writeln(_prettyPrint(wrappedMatcher))
