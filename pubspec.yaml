@@ -1,0 +1,9 @@
+name: tester_test
+description: An interop library for tester and package:test
+version: 0.0.1
+
+environment:
+  sdk: '>=2.7.0 <3.0.0'
+
+dependencies:
+  test: ^1.6.0
